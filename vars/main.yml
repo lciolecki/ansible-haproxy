@@ -28,6 +28,9 @@ empty: true
 #      default-dh-param: 2048
 #    zlib:
 #      memlevel: 9
+#   options:
+#     - cpu-map 1 0
+#     - cpu-map 2 1
 #
 #haproxy_defaults:
 #  mode:
