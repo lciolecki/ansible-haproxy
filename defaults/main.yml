@@ -3,6 +3,9 @@
 # defaults file for haproxy
 
 haproxy_manage_config: true
+
+haproxy_ubuntu_repository: "ppa:vbernat/haproxy-1.6"
+
 haproxy_global:
   ssl-default-bind-options: no-sslv3 no-tls-tickets force-tlsv12
   ssl-default-bind-ciphers: ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS
