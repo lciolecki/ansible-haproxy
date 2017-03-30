@@ -19,6 +19,10 @@ haproxy_global:
   stats:
     sockets: /run/haproxy/admin.sock
     timeout: 30s
+  spread_checks: 4
+  tune:
+    - maxrewrite: 1024
+    - ssl.default-dh-param: 2048
 
 haproxy_defaults:
   mode: http
