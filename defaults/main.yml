@@ -7,8 +7,8 @@ haproxy_manage_config: true
 haproxy_ubuntu_repository: "ppa:vbernat/haproxy-1.6"
 
 haproxy_global:
-  ssl-default-bind-options: no-sslv3 no-tls-tickets force-tlsv12
-  ssl-default-bind-ciphers: ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS
+  ssl_default_bind_options: no-sslv3 no-tls-tickets force-tlsv12
+  ssl_default_bind_ciphers: ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS
   log:
     - address: /dev/log
       facility: local0
@@ -24,8 +24,8 @@ haproxy_global:
     timeout: 30s
   spread_checks: 4
   tune:
-    - maxrewrite: 1024
-    - ssl.default-dh-param: 2048
+    - maxrewrite 1024
+    - ssl.default-dh-param 2048
 
 haproxy_defaults:
   mode: http
